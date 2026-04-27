@@ -1,0 +1,1 @@
+python detect_video.py /home/junzhicai/datasets/yolo/face-hand-person/runs/hfp_y11n640-fulldata-4/weights/best.pt  /home/junzhicai/test2.mp4  -o /home/junzhicai/test2.y11n640fulldata.mp4 --conf 0.5 --crop-square --imgsz 640

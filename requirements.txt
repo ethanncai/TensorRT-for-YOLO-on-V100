@@ -1,0 +1,17 @@
+# YOLO 推理与 OpenCV 写视频
+ultralytics>=8.2.0
+opencv-python>=4.8.0
+tqdm>=4.65.0
+# yolo2tensorrt-vanilla.py：ONNX→TRT（内置 onnx2engine，无 ultralytics）
+onnx>=1.14.0
+PyYAML>=6.0
+# compress_images_shortest_640.py 依赖系统已安装的 ffmpeg / ffprobe（非 pip 包）
+#
+# --- TensorRT（yolo2tensorrt-*.py 导出 .engine、detect_video_tensorrt.py 推理 .engine）---
+# 需要：NVIDIA 驱动 + 与驱动匹配的 CUDA + 与 CUDA 匹配的 TensorRT。
+# Python 侧需能 import tensorrt；常见安装方式（择一，版本须与 CUDA 对齐，见 NVIDIA 文档）：
+#   - 从 https://developer.nvidia.com/tensorrt 下载 TensorRT tar/deb 安装后，把 python 目录加入 PYTHONPATH，或
+#   - pip 安装与你 CUDA 版本对应的 wheel，例如部分环境可用:
+#       pip install tensorrt
+#     或 NVIDIA 提供的组合包（名称随版本变化，如 tensorrt / nvidia-tensorrt 等，以官方说明为准）。
+# Ultralytics 会在导出/加载时检查 tensorrt；CUDA、PyTorch 也需与 TensorRT 版本兼容。
