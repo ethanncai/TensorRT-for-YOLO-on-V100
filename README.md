@@ -2,7 +2,6 @@
 
 我仅仅在Tesla V100 GPU上测试过，由于最新的tensorrt(10.x.x)不支持SM 70及以下的设备（例如 V100），所以我放了一个备忘工程在这里，只要按照这个工程就可以跑通
 
----
 
 ## 中文
 
@@ -161,6 +160,13 @@ python detect_video_tensorrt.py model.engine video.mp4 \
 
 依赖见 `requirements.txt`。
 
+
+
+### Reference
+
+[https://blog.csdn.net/weixin_42625070/article/details/160459841](https://blog.csdn.net/weixin_42625070/article/details/160459841)
+
+
 ---
 
 ## English
@@ -312,4 +318,6 @@ python detect_video_tensorrt.py model.engine video.mp4 \
   --save-cropped cropped.mp4
 ```
 
-See `requirements.txt` for dependencies.
+### Reference
+
+[https://blog.csdn.net/weixin_42625070/article/details/160459841](https://blog.csdn.net/weixin_42625070/article/details/160459841)
