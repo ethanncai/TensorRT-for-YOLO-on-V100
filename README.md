@@ -8,7 +8,7 @@
 
 ### 步骤
 
-#### 第一步：按照要求组织基础
+#### 第一步：按照要求组织环境
 
 
 | 组件 | 版本 |
@@ -18,7 +18,12 @@
 | PyTorch 内置 CUDA (`torch.version.cuda`) | 12.1 |
 | pip `nvidia-cudnn-cu12` | 8.9.2.26 |
 | pip `tensorrt` | 8.6.1 |
-| pip `ultralytics` | 8.4.41 |
+
+通常只需要装torch，下面这些cuda什么的都会自动跟对torch把这些搞定之后再
+
+```
+pip install -r requirements
+```
 
 #### 第二步： 下载tensorrt包
 
